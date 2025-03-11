@@ -1,1 +1,54 @@
 
+<!DOCTYPE html>
+<html lang="cy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gêm Codio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Gêm Her Codio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hafan</a></li>
+                <li><a href="about.html">Amdanaf i</a></li>
+                <li><a href="skills.html">Sgiliau</a></li>
+                <li><a href="contact.html">Cysylltwch â Fi</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="game">
+        <h2>Datrys Problem!</h2>
+        <p>Ysgrifennwch y rhif cywir sy'n cyfateb i'r patrwm isod:</p>
+        <p><strong>2, 4, 8, 16, ?</strong></p>
+        
+        <input type="number" id="userAnswer" placeholder="Rhowch eich ateb yma">
+        <button onclick="checkAnswer()">Gwiriwch</button>
+        
+        <p id="resultMessage"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Fy Mhorthffolio</p>
+    </footer>
+
+    <script>
+        function checkAnswer() {
+            let answer = document.getElementById("userAnswer").value;
+            let resultMessage = document.getElementById("resultMessage");
+
+            if (answer == 32) {
+                resultMessage.innerHTML = "✅ Cywir! Gwych!";
+                resultMessage.style.color = "green";
+            } else {
+                resultMessage.innerHTML = "❌ Anghywir, ceisiwch eto!";
+                resultMessage.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
