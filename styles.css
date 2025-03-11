@@ -315,3 +315,42 @@ footer {
     transform: scale(1.1);
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
 }
+/* Recent Projects Section */
+.recent-projects {
+    text-align: center;
+    padding: 50px;
+}
+
+.recent-projects h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.projects-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project {
+    background: white;
+    padding: 15px;
+    width: 280px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
+    text-align: center;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
