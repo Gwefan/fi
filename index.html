@@ -6,103 +6,55 @@
     <title>Fy Mhorthffolio</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background: #004d99;
-            color: white;
-            padding: 1em;
-            text-align: center;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-        section {
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 800px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .gauge {
-            width: 100%;
-            background: #ddd;
-            border-radius: 5px;
-            overflow: hidden;
-            margin: 10px 0;
-        }
-        .fill {
-            background: #004d99;
-            color: white;
-            text-align: center;
-            padding: 5px 0;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: #004d99;
-            color: white;
-        }
-    </style>
 </head>
 <body>
     <header>
         <h1>Croeso i Fy Mhorthffolio</h1>
         <nav>
             <ul>
-                <li><a href="#about">Amdanaf i</a></li>
-                <li><a href="#skills">Sgiliau</a></li>
-                <li><a href="#game">Gêm</a></li>
+                <li><a href="index.html">Hafan</a></li>
+                <li><a href="about.html">Amdanaf i</a></li>
+                <li><a href="skills.html">Sgiliau</a></li>
+                <li><a href="game.html">Gêm</a></li>
             </ul>
         </nav>
     </header>
     
-    <section id="about">
-        <h2>Amdanaf i</h2>
-        <img src="profile.jpg" alt="Llun Proffil">
-        <p>Helo! Fi yw [Eich Enw], datblygwr brwdfrydig gyda sgiliau cryf mewn codio a datrys problemau.</p>
+    <section>
+        <h2>Hafan</h2>
+        <p>Helo! Croeso i fy mhorthffolio proffesiynol lle gallwch ddysgu mwy amdanaf i, fy sgiliau a chymryd rhan mewn her codio.</p>
+        <img src="profile.jpg" alt="Llun Proffil" class="profile-pic">
     </section>
     
-    <section id="skills">
-        <h2>Fy Sgiliau</h2>
-        <div class="skill">
-            <span>JavaScript</span>
-            <div class="gauge"><div class="fill" style="width: 90%">90%</div></div>
-        </div>
-        <div class="skill">
-            <span>Python</span>
-            <div class="gauge"><div class="fill" style="width: 85%">85%</div></div>
-        </div>
-        <div class="skill">
-            <span>Datrys Problemau</span>
-            <div class="gauge"><div class="fill" style="width: 95%">95%</div></div>
-        </div>
+    <footer>
+        <p>&copy; 2025 Fy Mhorthffolio</p>
+    </footer>
+</body>
+</html>
+
+<!-- About Page -->
+<!DOCTYPE html>
+<html lang="cy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amdanaf i</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Amdanaf i</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hafan</a></li>
+                <li><a href="skills.html">Sgiliau</a></li>
+                <li><a href="game.html">Gêm</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <p>Fi yw [Eich Enw], datblygwr brwdfrydig sy'n angerddol am godio a datrys problemau cymhleth.</p>
     </section>
-    
-    <section id="game">
-        <h2>Profwch Fy Meddwl</h2>
-        <p>Ceisiwch ddatrys yr her codio syml hon:</p>
-        <div id="challenge"></div>
-        <button onclick="checkAnswer()">Cyflwyno Ateb</button>
-        <p id="result"></p>
-    </section>
-    
     <footer>
         <p>&copy; 2025 Fy Mhorthffolio</p>
     </footer>
