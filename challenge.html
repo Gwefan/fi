@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Her Rhesymeg</title>
+    <title>Gêm Her Rhesymeg</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,10 +23,20 @@
         h1 {
             color: #ffcc00;
         }
-        input, button {
+        .game-area {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
+        }
+        button {
             margin-top: 10px;
-            padding: 10px;
+            padding: 10px 20px;
             font-size: 16px;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
         .message {
             margin-top: 20px;
@@ -35,27 +45,36 @@
         }
     </style>
     <script>
-        function checkAnswer() {
-            let answer = document.getElementById("answer").value.toLowerCase();
+        let targetNumber = Math.floor(Math.random() * 100) + 1;
+        let attempts = 0;
+
+        function checkGuess() {
+            let userGuess = parseInt(document.getElementById("guess").value);
             let message = document.getElementById("message");
-            
-            if (answer === "23") {
-                message.innerHTML = "Gwych! Ateb cywir!";
+            attempts++;
+
+            if (userGuess === targetNumber) {
+                message.innerHTML = `Gwych! Ateb cywir mewn ${attempts} cynnig!`;
                 message.style.color = "#00ff00";
+            } else if (userGuess > targetNumber) {
+                message.innerHTML = "Rhy fawr! Ceisiwch eto.";
+                message.style.color = "#ffcc00";
             } else {
-                message.innerHTML = "Arbrofwch eto!";
-                message.style.color = "#ff0000";
+                message.innerHTML = "Rhy fach! Ceisiwch eto.";
+                message.style.color = "#ffcc00";
             }
         }
     </script>
 </head>
 <body>
     <div class="container">
-        <h1>Her Rhesymeg</h1>
-        <p>Os yw dau ffermwr yn gallu plannu 4 coeden mewn 2 awr, faint o goed y gall 4 ffermwr eu plannu mewn 4 awr?</p>
-        <input type="text" id="answer" placeholder="Rhowch eich ateb yma">
-        <button onclick="checkAnswer()">Cyflwyno</button>
-        <p class="message" id="message"></p>
+        <h1>Gêm Her Rhesymeg</h1>
+        <p>Ceisiwch ddyfalu'r rhif rhwng 1 a 100!</p>
+        <div class="game-area">
+            <input type="number" id="guess" placeholder="Rhowch rif" min="1" max="100">
+            <button onclick="checkGuess()">Gwiriwch</button>
+            <p class="message" id="message"></p>
+        </div>
     </div>
 </body>
 </html>
